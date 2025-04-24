@@ -15484,7 +15484,7 @@ Scroll To Top style
 /* Mobile responsiveness */
 @media (max-width: 767.98px) {
   .client-section-two {
-      padding: 60px 0;
+      padding: 50px 0;
   }
   
   .client-section-two .bg-container {
@@ -15492,13 +15492,13 @@ Scroll To Top style
   }
   
   .client-block-two .inner-box .image {
-      height: 150px;
+      height: 235px;
       margin: 5px;
   }
   
   .client-block-two .inner-box .image img {
-      max-width: 80%;
-      max-height: 80%;
+      max-width: 100%;
+      max-height: 100%;
   }
   
   .client-block-two.empty {
