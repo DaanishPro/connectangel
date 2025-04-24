@@ -15269,7 +15269,7 @@ Scroll To Top style
 /***====================================================================
     Clients Section CSS
 ====================================================================***/
-.client-section {
+.client-section { 
   position: relative;
   padding: 120px 0;
 }
@@ -15281,7 +15281,7 @@ Scroll To Top style
 }
 @media (max-width: 1199.98px) {
   .client-section .sec-title .text {
-    padding-right: 0;
+      padding-right: 0;
   }
 }
 .rtl .client-section .sec-title .text {
@@ -15290,22 +15290,22 @@ Scroll To Top style
 }
 @media (max-width: 1199.98px) {
   .rtl .client-section .sec-title .text {
-    padding-left: 0;
+      padding-left: 0;
   }
 }
 @media (max-width: 1199.98px) {
   .client-section .content-column {
-    margin-bottom: 50px;
+      margin-bottom: 50px;
   }
 }
 @media (max-width: 1199.98px) {
   .client-section .content-column .inner-column {
-    text-align: center;
+      text-align: center;
   }
 }
 @media (max-width: 1199.98px) {
   .client-section .content-column .inner-column .sec-title {
-    margin-bottom: 30px;
+      margin-bottom: 30px;
   }
 }
 .client-section .sponsors-column .inner-column {
@@ -15315,17 +15315,17 @@ Scroll To Top style
 }
 @media (max-width: 767.98px) {
   .client-section .sponsors-column .inner-column {
-    flex-direction: column;
+      flex-direction: column;
   }
 }
 @media (max-width: 1199.98px) {
   .client-section .sponsors-column .inner-column .blocks-outer-box {
-    width: 33.3333333%;
+      width: 33.3333333%;
   }
 }
 @media (max-width: 767.98px) {
   .client-section .sponsors-column .inner-column .blocks-outer-box {
-    display: none;
+      display: none;
   }
 }
 .client-section .sponsors-column .inner-column .blocks-outer-box.show-md {
@@ -15333,15 +15333,15 @@ Scroll To Top style
 }
 @media (max-width: 767.98px) {
   .client-section .sponsors-column .inner-column .blocks-outer-box.show-md {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
   }
 }
 
 @media (max-width: 767.98px) {
   .client-block {
-    width: 50%;
+      width: 50%;
   }
 }
 .client-block .inner-box {
@@ -15358,7 +15358,7 @@ Scroll To Top style
 }
 @media (max-width: 1199.98px) {
   .client-block .inner-box {
-    width: 100%;
+      width: 100%;
   }
 }
 .dark-layout .client-block .inner-box {
@@ -15370,7 +15370,7 @@ Scroll To Top style
 }
 @media (max-width: 767.98px) {
   .client-block .inner-box .image {
-    width: 140px;
+      width: 140px;
   }
 }
 .client-block .inner-box .image:hover img:first-child {
@@ -15403,23 +15403,34 @@ Scroll To Top style
 }
 
 /***====================================================================
-    Clients Section
+  Clients Section Two
 ====================================================================***/
 .client-section-two {
   position: relative;
   padding: 120px 0;
 }
+.client-section-two .bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+  z-index: -1;
+  overflow: hidden;
+}
 .client-section-two .bg {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (max-width: 991.98px) {
   .client-section-two .client-block-two.empty {
-    display: none;
+      display: none;
   }
 }
 
@@ -15431,12 +15442,12 @@ Scroll To Top style
   margin-bottom: 0;
   border: 1px solid #BBBBBB;
   height: 212px;
-  /* overflow: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background-color: var(--theme-color-light);
+  overflow: hidden;
 }
 .client-block-two .inner-box .image:hover img:first-child {
   transform: translateY(0) scaleY(1);
@@ -15453,6 +15464,9 @@ Scroll To Top style
   width: auto !important;
   display: inline-block !important;
   transition: all 500ms ease;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 .client-block-two .inner-box .image img:first-child {
   position: absolute;
@@ -15467,6 +15481,36 @@ Scroll To Top style
   filter: blur(10px);
 }
 
+/* Mobile responsiveness */
+@media (max-width: 767.98px) {
+  .client-section-two {
+      padding: 60px 0;
+  }
+  
+  .client-section-two .bg-container {
+      height: calc(100% - 60px);
+  }
+  
+  .client-block-two .inner-box .image {
+      height: 150px;
+      margin: 5px;
+  }
+  
+  .client-block-two .inner-box .image img {
+      max-width: 80%;
+      max-height: 80%;
+  }
+  
+  .client-block-two.empty {
+      display: none !important;
+  }
+  
+  .client-block-two {
+      width: 50% !important;
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+  }
+}
 /***====================================================================
     Page Title CSS
 ====================================================================***/
