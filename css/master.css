@@ -9715,8 +9715,7 @@ Scroll To Top style
 }
 
 /***
-
-====================================================================
+/***====================================================================
     Features Section Two
 ====================================================================***/
 .feature-section-two {
@@ -9783,34 +9782,52 @@ Scroll To Top style
   left: 0;
   background: linear-gradient(to top, #7906D2 0%, #3E036C 50%, #5C05A0 100%);
 }
-.feature-block-two .inner-box.active {
+.feature-block-two .inner-box.active,
+.feature-block-two .inner-box:hover {
   border-top-right-radius: 20px;
 }
-.feature-block-two .inner-box.active:after {
+.feature-block-two .inner-box.active:after,
+.feature-block-two .inner-box:hover:after {
   width: 100%;
 }
-.feature-block-two .inner-box.active .icon-box {
+.feature-block-two .inner-box.active .icon-box,
+.feature-block-two .inner-box:hover .icon-box {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-.feature-block-two .inner-box.active .icon-box .icon {
-  transform: scaleX(-1);
+.feature-block-two .inner-box.active .icon-box .icon,
+.feature-block-two .inner-box:hover .icon-box .icon {
   color: var(--theme-color-light);
+  transform: scaleX(-1);
 }
-.feature-block-two .inner-box.active .icon-box .icon-seven {
+.feature-block-two .inner-box.active .icon-box .icon-seven,
+.feature-block-two .inner-box:hover .icon-box .icon-seven {
   opacity: 0;
 }
-.feature-block-two .inner-box.active .icon-box .icon-eight {
+.feature-block-two .inner-box.active .icon-box .icon-eight,
+.feature-block-two .inner-box:hover .icon-box .icon-eight {
   opacity: 1;
 }
-.feature-block-two .inner-box.active .read-more span {
+.feature-block-two .inner-box.active .read-more span,
+.feature-block-two .inner-box:hover .read-more span {
   width: 90px;
 }
 .feature-block-two .inner-box.active .title,
 .feature-block-two .inner-box.active .text,
-.feature-block-two .inner-box.active .read-more {
+.feature-block-two .inner-box.active .read-more,
+.feature-block-two .inner-box:hover .title,
+.feature-block-two .inner-box:hover .text,
+.feature-block-two .inner-box:hover .read-more {
   color: var(--theme-color-light);
 }
+
+/* New styles for image icons */
+.feature-block-two .inner-box.active .icon-box img,
+.feature-block-two .inner-box:hover .icon-box img {
+  filter: brightness(0) invert(1); /* Makes the image white */
+  transition: all 300ms ease;
+}
+
 .feature-block-two .inner-box .icon-box {
   position: relative;
   width: 116px;
@@ -9912,6 +9929,7 @@ Scroll To Top style
   transition: all 300ms ease;
 }
 
+/* Keep all your other existing CSS styles below */
 /***
 
 ====================================================================
