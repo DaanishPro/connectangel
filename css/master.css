@@ -9165,7 +9165,7 @@ Scroll To Top style
 
 /* Add these styles to your existing CSS */
 .pricing-block-two .inner-box {
-  min-width: 350px; /* Reduced from 408px */
+  width: 500px; /* Reduced from 408px */
   border-radius: 100px 0px 30px 30px; /* More rounded corners */
 }
 
@@ -9187,7 +9187,7 @@ Scroll To Top style
 }
 
 .pricing-block-two .inner-box .feature-list .title {
-  font-size: 16px; /* Slightly smaller text */
+  font-size: 20px; /* Slightly smaller text */
 }
 
 /* For the Startup Registration card specifically */

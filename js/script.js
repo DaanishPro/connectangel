@@ -409,25 +409,29 @@
 	//Accordion Box
 	if ($('.accordion-box').length) {
 		$(".accordion-box").on('click', '.acc-btn', function () {
-
-			var outerBox = $(this).parents('.accordion-box');
-			var target = $(this).parents('.accordion');
-
-			if (!$(this).hasClass('active')) {
-				$(outerBox).find('.accordion .acc-btn').removeClass('active ');
-			}
-
-			if ($(this).next('.acc-content').is(':visible') === true) {
-				return false;
-			} else {
-				$(this).addClass('active');
-				$(outerBox).children('.accordion').removeClass('active-block');
-				$(outerBox).find('.accordion').children('.acc-content').slideUp(300);
-				target.addClass('active-block');
-				$(this).next('.acc-content').slideDown(300);
-			}
+	  
+		  var outerBox = $(this).parents('.accordion-box');
+		  var target = $(this).parents('.accordion');
+	  
+		  if ($(this).hasClass('active')) {
+			// Agar already active hai, toh hide kar do
+			$(this).removeClass('active');
+			$(target).removeClass('active-block');
+			$(this).next('.acc-content').slideUp(300);
+		  } else {
+			// Nahi toh sabko band karo aur isko open karo
+			$(outerBox).find('.accordion .acc-btn').removeClass('active');
+			$(outerBox).find('.accordion').removeClass('active-block');
+			$(outerBox).find('.accordion .acc-content').slideUp(300);
+	  
+			$(this).addClass('active');
+			$(target).addClass('active-block');
+			$(this).next('.acc-content').slideDown(300);
+		  }
+		  
 		});
-	}
+	  }
+	  
 	
 	//Event Image Hover
 	if ($('.event-block-inner').length) {
