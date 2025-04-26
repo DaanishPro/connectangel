@@ -9163,6 +9163,60 @@ Scroll To Top style
   text-align: left;
 }
 
+/* Add these styles to your existing CSS */
+.pricing-block-two .inner-box {
+  min-width: 350px; /* Reduced from 408px */
+  border-radius: 100px 0px 30px 30px; /* More rounded corners */
+}
+
+.pricing-block-two .inner-box .top-box {
+  padding: 60px 40px 40px 30px; /* Reduced padding */
+}
+
+.pricing-block-two .inner-box .price {
+  font-size: 72px; /* Smaller price text */
+  line-height: 1;
+}
+
+.pricing-block-two .inner-box .list-box {
+  padding: 0 40px 30px 30px; /* Reduced padding */
+}
+
+.pricing-block-two .inner-box .feature-list li {
+  margin-bottom: 12px; /* Tighter spacing */
+}
+
+.pricing-block-two .inner-box .feature-list .title {
+  font-size: 16px; /* Slightly smaller text */
+}
+
+/* For the Startup Registration card specifically */
+/* #pricing-tab2 .pricing-block-two .inner-box {
+  background: linear-gradient(135deg, #3E036C 0%, #5C05A0 50%, #7906D2 100%);
+} */
+
+#pricing-tab2 .pricing-block-two .inner-box .price {
+  color: white;
+  font-weight: 700;
+}
+
+#pricing-tab2 .pricing-block-two .inner-box .day {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+}
+
+#pricing-tab2 .pricing-block-two .inner-box .title {
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767.98px) {
+  .pricing-block-two .inner-box {
+    min-width: 100%;
+    border-radius: 50px 0px 20px 20px;
+  }
+}
+
 /***====================================================================
     Pricing Section Three
 ====================================================================***/
@@ -10738,6 +10792,57 @@ Scroll To Top style
     align-items: flex-start;
     gap: 15px;
     padding-top: 30px;
+  }
+}
+
+.about-section-two .image-column .inner-column .image {
+  position: relative;
+  border-radius: 30px;
+  margin-bottom: 0;
+  overflow: hidden;
+  width: 85%; /* Adjusted width */
+  height: 500px; /* Fixed height */
+  object-fit: cover; /* Ensure proper image scaling */
+}
+
+.about-section-two .image-column .inner-column .image.two {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 50%; /* Smaller width for front image */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Limit maximum height */
+  border: 7px solid var(--theme-color-light);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1399.98px) {
+  .about-section-two .image-column .inner-column .image.two {
+    display: block; /* Keep visible on smaller screens */
+    width: 40%;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-section-two .image-column .inner-column .image {
+    height: 400px;
+  }
+  .about-section-two .image-column .inner-column .image.two {
+    width: 50%;
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-section-two .image-column .inner-column .image {
+    height: 350px;
+    width: 90%;
+  }
+  .about-section-two .image-column .inner-column .image.two {
+    width: 60%;
+    max-height: 200px;
   }
 }
 
