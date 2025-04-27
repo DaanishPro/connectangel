@@ -21,6 +21,36 @@
 </head>
 
 <body>
+    
+
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+        <div class="splash-logo">
+            <img src="images/connectsplash2.svg" alt="ConnectAngels Logo">
+        </div>
+    </div>
+    <!-- Splash Screen Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const splashScreen = document.querySelector('.splash-screen');
+            
+            // Show splash screen for 1 second then fade out
+            setTimeout(function() {
+                splashScreen.classList.add('fade-out');
+                
+                // Remove splash screen from DOM after fade out completes
+                setTimeout(function() {
+                    splashScreen.remove();
+                }, 500); // This should match the CSS transition time
+            }, 1000); // 1 second display time
+        });
+    </script> 
+
+   
+    
+    
+
+
 
     <div class="page-wrapper">
 
@@ -29,7 +59,7 @@
         <div class="circle-follow"></div>
 
         <!-- Preloader -->
-        <div class="preloader"></div>
+        <!-- <div class="preloader"></div> -->
 
         <!-- Main Header-->
         <header class="main-header header-style-two">
@@ -61,7 +91,7 @@
                         <!-- Logo Box -->
                         <div class="logo-box">
                             <div class="logo"><a href="index.html"><img src="images/connectlogo.svg" alt="Logo"
-                                        title="Konfer"></a></div>
+                                        title="ConnectAngels"></a></div>
                         </div>
 
                         <!-- Header Navbar -->
@@ -336,7 +366,7 @@
                             <a href="contact.html" class="theme-btn btn-style-one bg-pink">
                                 <!-- <img src="images/registernow.svg" alt=""
                                         style="border-radius:700px;  position: relative; z-index: 2; "> -->
-                                <span class="btn-title">Registration Now</span></a>
+                                <span class="btn-title">Register Now</span></a>
                         </div>
                     </div>
                 </div>
