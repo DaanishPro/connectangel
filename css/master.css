@@ -328,7 +328,7 @@ iframe {
 /* Tablet sizes */
 @media (min-width: 768px) and (max-width: 1199px) {
   .splash-logo img {
-      width: 700px;
+      width: 900px;
   }
 }
 
