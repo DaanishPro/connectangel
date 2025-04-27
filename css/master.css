@@ -328,7 +328,7 @@ iframe {
 /* Tablet sizes */
 @media (min-width: 768px) and (max-width: 1199px) {
   .splash-logo img {
-      width: 600px;
+      width: 700px;
   }
 }
 
@@ -4390,7 +4390,7 @@ Scroll To Top style
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 10px 20px 8px;
+  padding: 20px 10px 20px 15px;
 }
 .mobile-menu .close-btn {
   position: relative;
