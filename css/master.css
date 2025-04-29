@@ -12401,7 +12401,7 @@ Scroll To Top style
 .testimonial-block-two .inner-box .author-box {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items:center;
   padding: 0 53px 60px 56px;
   z-index: 1;
 }
@@ -12439,6 +12439,7 @@ Scroll To Top style
   position: relative;
   color: var(--theme-color-dark);
   margin-bottom: 0;
+  
 }
 .testimonial-block-two .inner-box .author-box .image-box {
   position: absolute;
@@ -12516,6 +12517,26 @@ Scroll To Top style
   .testimonial-block-two .inner-box {
       border-radius: 10px;
   }
+}
+
+/* Reset margins for all views */
+.testimonial-block-two:nth-child(4),
+.testimonial-block-two:nth-child(5),
+.testimonial-block-two:nth-child(6) {
+    margin-top: 0;
+}
+
+/* Apply special margins only for desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .testimonial-block-two:nth-child(4) {
+        margin-top: 240px;
+    }
+    .testimonial-block-two:nth-child(5) {
+        margin-top: 170px;
+    }
+    .testimonial-block-two:nth-child(6) {
+        margin-top: 100px;
+    }
 }
 
 
